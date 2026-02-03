@@ -1,0 +1,136 @@
+# Meetech Bot - Clean Production Structure
+
+## Total Files: 69 files (449KB)
+## Python Files: 54
+
+## Directory Structure:
+
+meetech-bot-clean/
+├── README.md                    # Complete setup and usage guide
+├── requirements.txt             # Python dependencies
+├── pyproject.toml              # Project configuration
+├── docker-compose.yml          # Docker services (PostgreSQL, Redis)
+├── alembic.ini                 # Database migration config
+├── .env.example                # Environment variables template
+├── .gitignore                  # Git ignore rules
+├── .dockerignore               # Docker ignore rules
+│
+├── alembic/                    # Database migrations
+│   └── versions/               # Migration files
+│
+├── config/                     # Configuration files
+│   └── proof_assets/           # Proof asset seed data
+│       └── seed_assets.yaml
+│
+├── scripts/                    # Deployment & maintenance scripts
+│   ├── deploy.sh               # Production deployment script
+│   ├── backup_db.sh            # Database backup script
+│   └── validate_quickstart.py # Environment validation
+│
+└── src/                        # Source code (54 Python files)
+    ├── __init__.py
+    │
+    ├── api/                    # FastAPI routers (6 files)
+    │   ├── main.py             # Application entry point
+    │   ├── health.py           # Health & metrics endpoints
+    │   ├── webhook.py          # WhatsApp webhook
+    │   ├── agent.py            # Agent dashboard API
+    │   ├── admin.py            # Admin control panel
+    │   └── gdpr.py             # GDPR compliance endpoints
+    │
+    ├── models/                 # Database models (9 files)
+    │   ├── __init__.py
+    │   ├── enums.py            # 6 enums (State, Sender, etc.)
+    │   ├── lead.py
+    │   ├── conversation.py
+    │   ├── message.py
+    │   ├── lead_score.py
+    │   ├── state_transition.py
+    │   ├── proof_asset.py
+    │   ├── follow_up.py
+    │   └── human_agent.py
+    │
+    ├── services/               # Business logic (11 files)
+    │   ├── intent_detector.py
+    │   ├── state_machine.py
+    │   ├── qualification_service.py
+    │   ├── response_generator.py
+    │   ├── session_manager.py
+    │   ├── message_processor.py
+    │   ├── lead_scorer.py
+    │   ├── handover_service.py
+    │   ├── follow_up_scheduler.py
+    │   ├── proof_asset_selector.py
+    │   └── analytics_service.py
+    │
+    ├── repositories/           # Database access (7 files)
+    │   ├── lead_repository.py
+    │   ├── conversation_repository.py
+    │   ├── message_repository.py
+    │   ├── lead_score_repository.py
+    │   ├── follow_up_repository.py
+    │   ├── proof_asset_repository.py
+    │   └── human_agent_repository.py
+    │
+    ├── integrations/           # External APIs (8 files)
+    │   ├── whatsapp_client.py
+    │   ├── llm_client.py
+    │   ├── calendar.py         # Calendar interface
+    │   ├── calendar_google.py
+    │   ├── calendar_calendly.py
+    │   ├── crm.py              # CRM interface
+    │   ├── crm_notion.py
+    │   └── crm_hubspot.py
+    │
+    ├── workers/                # Celery workers (3 files)
+    │   ├── celery_app.py
+    │   ├── follow_up_worker.py
+    │   └── cleanup_worker.py
+    │
+    ├── utils/                  # Utilities (6 files)
+    │   ├── logger.py
+    │   ├── rate_limiter.py
+    │   ├── content_filter.py
+    │   ├── state_logger.py
+    │   ├── metrics.py          # Prometheus metrics
+    │   └── error_tracker.py    # Sentry integration
+    │
+    └── db/                     # Database connections (2 files)
+        ├── connection.py       # PostgreSQL
+        └── redis_client.py     # Redis
+
+## Key Features Included:
+
+✅ WhatsApp webhook integration
+✅ 9-state conversation flow
+✅ AI-powered intent detection
+✅ Lead qualification & scoring
+✅ Human agent handover
+✅ Automated follow-ups (2h/24h/3d)
+✅ Proof asset injection
+✅ Admin dashboard & analytics
+✅ GDPR compliance (export/delete)
+✅ Prometheus metrics
+✅ Calendar integrations (Google, Calendly)
+✅ CRM integrations (Notion, HubSpot)
+✅ Error tracking (Sentry)
+✅ Deployment scripts
+
+## What's NOT Included (Removed):
+
+❌ Test files (tests/ directory)
+❌ Documentation files (specs/, docs/, CLAUDE.md)
+❌ Implementation status files
+❌ History/prompt files
+❌ Build artifacts (__pycache__, .pyc, egg-info)
+
+## Quick Start:
+
+1. cp .env.example .env
+2. Edit .env with your credentials
+3. docker-compose up -d
+4. alembic upgrade head
+5. uvicorn src.api.main:app --reload
+6. celery -A src.workers.celery_app worker --loglevel=info
+
+See README.md for complete instructions.

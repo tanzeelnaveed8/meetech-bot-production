@@ -1,0 +1,131 @@
+# Seed Proof Assets for Lead Qualification Bot
+# These assets will be loaded into the database on initialization
+
+proof_assets:
+  # E-commerce Portfolio Examples
+  - asset_type: PORTFOLIO
+    project_type: e-commerce
+    title: "Fashion E-commerce Platform"
+    description: "Built a high-converting e-commerce store for a fashion brand with 50k+ monthly visitors"
+    content_url: "https://example.com/portfolio/fashion-ecommerce.jpg"
+    content_text: null
+    is_active: true
+
+  - asset_type: PORTFOLIO
+    project_type: e-commerce
+    title: "Electronics Online Store"
+    description: "Developed a scalable e-commerce platform handling 10k+ daily transactions"
+    content_url: "https://example.com/portfolio/electronics-store.jpg"
+    content_text: null
+    is_active: true
+
+  # Mobile App Portfolio Examples
+  - asset_type: PORTFOLIO
+    project_type: mobile-app
+    title: "Mobile Banking Application"
+    description: "Created a secure mobile banking app with 100k+ downloads and 4.8-star rating"
+    content_url: "https://example.com/portfolio/banking-app.jpg"
+    content_text: null
+    is_active: true
+
+  - asset_type: PORTFOLIO
+    project_type: mobile-app
+    title: "Fitness Tracking App"
+    description: "Built a cross-platform fitness app with real-time tracking and social features"
+    content_url: "https://example.com/portfolio/fitness-app.jpg"
+    content_text: null
+    is_active: true
+
+  # Website Portfolio Examples
+  - asset_type: PORTFOLIO
+    project_type: website
+    title: "Corporate Website for Tech Startup"
+    description: "Designed and developed a modern corporate website with CMS integration"
+    content_url: "https://example.com/portfolio/corporate-website.jpg"
+    content_text: null
+    is_active: true
+
+  - asset_type: PORTFOLIO
+    project_type: website
+    title: "Restaurant Website with Online Ordering"
+    description: "Created a responsive restaurant website with integrated online ordering system"
+    content_url: "https://example.com/portfolio/restaurant-website.jpg"
+    content_text: null
+    is_active: true
+
+  # Case Studies
+  - asset_type: CASE_STUDY
+    project_type: e-commerce
+    title: "E-commerce Conversion Rate Optimization"
+    description: "How we increased conversion rates by 200% for an online retailer"
+    content_url: null
+    content_text: "Challenge: Client had high traffic but low conversions. Solution: Implemented A/B testing, optimized checkout flow, and improved product pages. Result: 200% increase in conversion rate and 150% increase in revenue within 6 months."
+    is_active: true
+
+  - asset_type: CASE_STUDY
+    project_type: mobile-app
+    title: "Mobile App User Engagement Success"
+    description: "Increased user engagement by 300% through strategic feature development"
+    content_url: null
+    content_text: "Challenge: Low user retention and engagement. Solution: Added gamification, push notifications, and social sharing features. Result: 300% increase in daily active users and 250% increase in session duration."
+    is_active: true
+
+  - asset_type: CASE_STUDY
+    project_type: website
+    title: "Website Performance Optimization"
+    description: "Reduced page load time by 70% and improved SEO rankings"
+    content_url: null
+    content_text: "Challenge: Slow website affecting user experience and SEO. Solution: Implemented caching, image optimization, and code splitting. Result: 70% faster load times, 50% increase in organic traffic, and improved Google rankings."
+    is_active: true
+
+  # Client Testimonials
+  - asset_type: TESTIMONIAL
+    project_type: e-commerce
+    title: "Client Testimonial - Fashion Brand CEO"
+    description: "5-star review from satisfied e-commerce client"
+    content_url: null
+    content_text: "\"Meetech transformed our online presence. The e-commerce platform they built is beautiful, fast, and has doubled our online sales. Highly recommended!\" - Sarah Johnson, CEO of StyleHub"
+    is_active: true
+
+  - asset_type: TESTIMONIAL
+    project_type: mobile-app
+    title: "Client Testimonial - Startup Founder"
+    description: "5-star review from mobile app client"
+    content_url: null
+    content_text: "\"Working with Meetech was a game-changer. They delivered our mobile app on time, within budget, and exceeded our expectations. The app has been downloaded over 50k times!\" - Michael Chen, Founder of FitLife"
+    is_active: true
+
+  - asset_type: TESTIMONIAL
+    project_type: website
+    title: "Client Testimonial - Restaurant Owner"
+    description: "5-star review from website client"
+    content_url: null
+    content_text: "\"Our new website has brought in so many new customers. The online ordering system is seamless, and our customers love it. Thank you Meetech!\" - Maria Rodriguez, Owner of Bella Italia"
+    is_active: true
+
+  # SaaS Portfolio Examples
+  - asset_type: PORTFOLIO
+    project_type: saas
+    title: "Project Management SaaS Platform"
+    description: "Built a scalable SaaS platform serving 5000+ businesses"
+    content_url: "https://example.com/portfolio/saas-platform.jpg"
+    content_text: null
+    is_active: true
+
+  # Blockchain Portfolio Examples
+  - asset_type: PORTFOLIO
+    project_type: blockchain
+    title: "NFT Marketplace Platform"
+    description: "Developed a secure NFT marketplace with smart contract integration"
+    content_url: "https://example.com/portfolio/nft-marketplace.jpg"
+    content_text: null
+    is_active: true
+
+  # General Testimonials
+  - asset_type: TESTIMONIAL
+    project_type: general
+    title: "Client Testimonial - Enterprise Client"
+    description: "5-star review from enterprise client"
+    content_url: null
+    content_text: "\"Meetech's team is professional, responsive, and delivers exceptional quality. They've been our go-to development partner for 3 years.\" - David Thompson, CTO of TechCorp"
+    is_active: true
