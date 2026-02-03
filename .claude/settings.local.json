@@ -3,7 +3,12 @@
     "allow": [
       "Bash(git init:*)",
       "Bash(git remote:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd comprehensive test suite and fix critical issues\n\n- Created 25 comprehensive tests \\(API, models, services, integrations, utils\\)\n- Fixed langchain import errors \\(updated to new API\\)\n- Added missing prometheus_client dependency\n- Created logs directory\n- Added test report and documentation\n- Test coverage: 44% baseline established\n- All 54 Python files validated\n\nTests passing: 24/25 \\(1 skipped\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git branch -M main)",
+      "Bash(git push -u origin main)",
+      "Bash(git commit:*)",
+      "Bash(git config --global credential.helper store)"
     ]
   }
 }
