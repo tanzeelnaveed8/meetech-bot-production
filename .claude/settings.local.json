@@ -8,7 +8,9 @@
       "Bash(git branch -M main)",
       "Bash(git push -u origin main)",
       "Bash(git commit:*)",
-      "Bash(git config --global credential.helper store)"
+      "Bash(git config --global credential.helper store)",
+      "Bash(git checkout:*)",
+      "Bash(git ls-tree:*)"
     ]
   }
 }
